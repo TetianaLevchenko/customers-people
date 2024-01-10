@@ -1,7 +1,7 @@
-C:\Users\user\Documents\materials\data\AdventureWorks Raw Data\ 
-C:\Users\user\Documents\materials\data\AdventureWorks PBIX Files\ 
-C:\Users\user\Documents\materials\data\AdventureWorks Images\ 
-C:\Users\user\Documents\materials\.idea\
-C:\Users\user\Documents\materials\.vscode\
-C:\Users\user\Documents\materials\logs\
-C:\Users\user\Documents\materials\venv\
+data/AdventureWorks\ Raw\ Data/
+data/AdventureWorks\ PBIX\ Files/
+data/AdventureWorks\ Images/
+.idea/
+.vscode/
+logs/
+venv/
