@@ -1,0 +1,53 @@
+[2023-11-02T11:30:22.636+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: test_dag_tutorial.create_postgres_table manual__2023-11-02T11:30:21.069814+00:00 [queued]>
+[2023-11-02T11:30:22.662+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: test_dag_tutorial.create_postgres_table manual__2023-11-02T11:30:21.069814+00:00 [queued]>
+[2023-11-02T11:30:22.663+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-02T11:30:22.664+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-02T11:30:22.665+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-02T11:30:22.696+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): create_postgres_table> on 2023-11-02 11:30:21.069814+00:00
+[2023-11-02T11:30:22.702+0000] {standard_task_runner.py:55} INFO - Started process 3669 to run task
+[2023-11-02T11:30:22.705+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'test_dag_tutorial', 'create_postgres_table', 'manual__2023-11-02T11:30:21.069814+00:00', '--job-id', '564', '--raw', '--subdir', 'DAGS_FOLDER/test_dag_tutorial.py', '--cfg-path', '/tmp/tmpjbqrhdhe']
+[2023-11-02T11:30:22.707+0000] {standard_task_runner.py:83} INFO - Job 564: Subtask create_postgres_table
+[2023-11-02T11:30:22.807+0000] {task_command.py:376} INFO - Running <TaskInstance: test_dag_tutorial.create_postgres_table manual__2023-11-02T11:30:21.069814+00:00 [running]> on host 1dfdc0df4852
+[2023-11-02T11:30:22.931+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=tetiana
+AIRFLOW_CTX_DAG_ID=test_dag_tutorial
+AIRFLOW_CTX_TASK_ID=create_postgres_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-02T11:30:21.069814+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-02T11:30:21.069814+00:00
+[2023-11-02T11:30:22.945+0000] {base.py:71} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2023-11-02T11:30:22.950+0000] {sql.py:315} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS people (
+        Index SERIAL PRIMARY KEY,
+        User_ID VARCHAR NOT NULL,
+        Last_Name VARCHAR NOT NULL,
+        Sex VARCHAR NOT NULL,
+        Email VARCHAR NOT NULL,
+        Phone VARCHAR NOT NULL,
+        Date_of_birth DATE NOT NULL
+        Job_Title  VARCHAR NOT NULL
+        
+
+        )
+        , parameters: None
+[2023-11-02T11:30:22.951+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 94, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 295, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 320, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "Job_Title"
+LINE 10:         Job_Title  VARCHAR NOT NULL
+                 ^
+
+[2023-11-02T11:30:22.961+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=test_dag_tutorial, task_id=create_postgres_table, execution_date=20231102T113021, start_date=20231102T113022, end_date=20231102T113022
+[2023-11-02T11:30:22.978+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 564 for task create_postgres_table (syntax error at or near "Job_Title"
+LINE 10:         Job_Title  VARCHAR NOT NULL
+                 ^
+; 3669)
+[2023-11-02T11:30:22.998+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-02T11:30:23.025+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

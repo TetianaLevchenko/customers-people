@@ -1,0 +1,42 @@
+[2023-11-03T15:40:12.486+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T15:40:07.912541+00:00 [queued]>
+[2023-11-03T15:40:12.507+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T15:40:07.912541+00:00 [queued]>
+[2023-11-03T15:40:12.508+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:40:12.509+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T15:40:12.510+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:40:12.540+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_people> on 2023-11-03 15:40:07.912541+00:00
+[2023-11-03T15:40:12.546+0000] {standard_task_runner.py:55} INFO - Started process 1294 to run task
+[2023-11-03T15:40:12.550+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'read_people', 'manual__2023-11-03T15:40:07.912541+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmpau38aryj']
+[2023-11-03T15:40:12.552+0000] {standard_task_runner.py:83} INFO - Job 71: Subtask read_people
+[2023-11-03T15:40:12.629+0000] {task_command.py:376} INFO - Running <TaskInstance: people.read_people manual__2023-11-03T15:40:07.912541+00:00 [running]> on host 113d79be32ee
+[2023-11-03T15:40:12.716+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=read_people
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T15:40:07.912541+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T15:40:07.912541+00:00
+[2023-11-03T15:40:12.721+0000] {logging_mixin.py:120} INFO - [['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10,8e4FB470FE19bF0,Isaiah,Downs,Male,virginiaterrell@example.org,+1-511-372-1544x8206,1964-09-20,"Engineer, site"'], ['11'], ['12'], ['13,C03fDADdAadAdCe,Mandy,Blake,Male,jefferynoble@example.org,(992)466-1305x4947,2007-12-08,"Scientist, clinical (histocompatibility and immunogenetics)"'], ['14'], ['15'], ['16'], ['17'], ['18'], ['19,7F7E1BAcb0C9AFf,Alvin,Paul,Male,gilbertdonaldson@example.com,219.436.0887x07551,1949-05-12,"Teacher, adult education"'], ['20'], ['21,b31D271F8c200AB,Jacqueline,Norton,Female,carias@example.net,819.309.7679x59173,1952-10-09,"Scientist, marine"'], ['22'], ['23'], ['24'], ['25'], ['26,c9F2282C40BEC1E,Sean,Levine,Male,sallymiller@example.net,4915828504,2010-10-09,"Conservation officer, nature"'], ['27'], ['28'], ['29'], ['30'], ['31'], ['32'], ['33'], ['34,6Dec5b5542F8ed8,Brandon,Schmidt,Female,mconley@example.net,+1-386-673-1465x006,1931-05-12,"Engineer, biomedical"'], ['35'], ['36'], ['37,aa614aAE4B7Cf0C,Leonard,Hurst,Male,clinton78@example.org,941-038-0427x38800,1938-03-13,"Accountant, chartered management"'], ['38,ACcde95AAe3e6cC,Gene,Rich,Female,luisdeleon@example.org,+1-356-818-6604x89537,1946-08-22,"Surveyor, quantity"'], ['39'], ['40'], ['41,7D0AcBF6CCac3fd,Matthew,Stone,Female,evelyn31@example.org,952-381-6360,2017-08-23,"Scientist, clinical (histocompatibility and immunogenetics)"'], ['42'], ['43'], ['44'], ['45'], ['46'], ['47,f3BD2cBF7eEb6df,Danielle,Estrada,Female,jvang@example.org,(890)374-9518x772,1930-07-09,"Accountant, chartered management"'], ['48'], ['49'], ['50,E47FB71DD9ACCd9,Joshua,Sweeney,Male,daisymcgee@example.net,875.994.2100x535,1954-07-28,"Education officer, museum"'], ['51'], ['52'], ['53'], ['54'], ['55'], ['56'], ['57'], ['58'], ['59'], ['60'], ['61'], ['62'], ['63'], ['64'], ['65,Ee6974f90eeCe18,Harold,Barnett,Female,nathan65@example.org,+1-026-265-6392,1943-03-15,"Biochemist, clinical"'], ['66,cEf02C076afa07f,Larry,Harper,Male,maria32@example.org,+1-244-630-3792x4121,2021-05-05,"Scientist, water quality"'], ['67'], ['68,3faB1CBfEFBDdD4,Brittney,Rubio,Female,corey92@example.com,593.976.2528,1959-12-24,"Biochemist, clinical"'], ['69'], ['70'], ['71'], ['72'], ['73'], ['74'], ['75,c935b7Eb6FA0B0F,Kim,Andrews,Female,wpetersen@example.org,7677125383,1990-11-15,"Biochemist, clinical"'], ['76'], ['77,dade3452F0c32FD,Jonathon,Atkinson,Male,gailfrench@example.net,874-037-2032x932,2011-07-19,"Psychologist, forensic"'], ['78'], ['79'], ['80'], ['81'], ['82'], ['83'], ['84'], ['85,E883773cA5219Be,Helen,Williamson,Female,melvin08@example.net,001-377-726-4229,1911-08-11,"Lecturer, further education"'], ['86'], ['87,5834700fbEd2771,Chelsea,Dickson,Male,johnnyhendricks@example.net,001-698-651-0138x18588,1958-05-13,"Teacher, early years/pre"'], ['88'], ['89'], ['90'], ['91'], ['92,d6EA619A7C4aA95,Jamie,Hardy,Female,sheenadouglas@example.com,(900)803-9295x11533,1994-07-17,"Conservator, furniture"'], ['93'], ['94'], ['95'], ['96'], ['97'], ['98'], ['99'], ['100']]
+[2023-11-03T15:40:12.731+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-03T15:40:12.737+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people.py", line 28, in _read_people
+    commit_every = 1000, replace = True, replace_index="Index")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 409, in insert_rows
+    cur.execute(sql, values)
+psycopg2.errors.SyntaxError: syntax error at or near "-"
+LINE 1: INSERT INTO people-100 (Index, User_Id, First_Name) VALUES (...
+                          ^
+
+[2023-11-03T15:40:12.753+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=people, task_id=read_people, execution_date=20231103T154007, start_date=20231103T154012, end_date=20231103T154012
+[2023-11-03T15:40:12.773+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 71 for task read_people (syntax error at or near "-"
+LINE 1: INSERT INTO people-100 (Index, User_Id, First_Name) VALUES (...
+                          ^
+; 1294)
+[2023-11-03T15:40:12.804+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-03T15:40:12.827+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

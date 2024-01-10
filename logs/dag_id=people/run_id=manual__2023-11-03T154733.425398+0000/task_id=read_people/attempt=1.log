@@ -1,0 +1,32 @@
+[2023-11-03T15:47:37.342+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T15:47:33.425398+00:00 [queued]>
+[2023-11-03T15:47:37.358+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T15:47:33.425398+00:00 [queued]>
+[2023-11-03T15:47:37.359+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:47:37.361+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T15:47:37.361+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:47:37.383+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_people> on 2023-11-03 15:47:33.425398+00:00
+[2023-11-03T15:47:37.390+0000] {standard_task_runner.py:55} INFO - Started process 1656 to run task
+[2023-11-03T15:47:37.393+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'read_people', 'manual__2023-11-03T15:47:33.425398+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmpd6elp5pb']
+[2023-11-03T15:47:37.395+0000] {standard_task_runner.py:83} INFO - Job 79: Subtask read_people
+[2023-11-03T15:47:37.468+0000] {task_command.py:376} INFO - Running <TaskInstance: people.read_people manual__2023-11-03T15:47:33.425398+00:00 [running]> on host 113d79be32ee
+[2023-11-03T15:47:37.576+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=read_people
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T15:47:33.425398+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T15:47:33.425398+00:00
+[2023-11-03T15:47:37.583+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people.py", line 21, in _read_people
+    row[1].strip(),
+IndexError: list index out of range
+[2023-11-03T15:47:37.640+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=people, task_id=read_people, execution_date=20231103T154733, start_date=20231103T154737, end_date=20231103T154737
+[2023-11-03T15:47:37.659+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 79 for task read_people (list index out of range; 1656)
+[2023-11-03T15:47:37.686+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-03T15:47:37.716+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,66 @@
+[2023-11-09T19:29:08.085+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-09T19:29:06.101098+00:00 [queued]>
+[2023-11-09T19:29:08.098+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-09T19:29:06.101098+00:00 [queued]>
+[2023-11-09T19:29:08.099+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-09T19:29:08.100+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-09T19:29:08.101+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-09T19:29:08.122+0000] {taskinstance.py:1304} INFO - Executing <Task(PostgresOperator): create_customers_table> on 2023-11-09 19:29:06.101098+00:00
+[2023-11-09T19:29:08.128+0000] {standard_task_runner.py:55} INFO - Started process 14686 to run task
+[2023-11-09T19:29:08.131+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'create_customers_table', 'manual__2023-11-09T19:29:06.101098+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/customers.py', '--cfg-path', '/tmp/tmplokrw9sn']
+[2023-11-09T19:29:08.133+0000] {standard_task_runner.py:83} INFO - Job 255: Subtask create_customers_table
+[2023-11-09T19:29:08.206+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.create_customers_table manual__2023-11-09T19:29:06.101098+00:00 [running]> on host 9dcc097b8292
+[2023-11-09T19:29:08.466+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=create_customers_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-09T19:29:06.101098+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-09T19:29:06.101098+00:00
+[2023-11-09T19:29:08.467+0000] {sql.py:253} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS customers (
+            Index INT NOT NULL primary key,
+            Customer_Id varchar(100),
+            First_Name varchar(100),
+            Last_Name varchar(100),
+            Company varchar(100),
+            City varchar(100),
+            Country varchar(100),
+            Phone_1 varchar(100),
+            
+        );
+    
+[2023-11-09T19:29:08.478+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-09T19:29:08.762+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-09T19:29:08.767+0000] {sql.py:364} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS customers (
+            Index INT NOT NULL primary key,
+            Customer_Id varchar(100),
+            First_Name varchar(100),
+            Last_Name varchar(100),
+            Company varchar(100),
+            City varchar(100),
+            Country varchar(100),
+            Phone_1 varchar(100),
+            
+        );
+    , parameters: None
+[2023-11-09T19:29:08.768+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 261, in execute
+    return_last=self.return_last,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 338, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 369, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near ")"
+LINE 12:         );
+                 ^
+
+[2023-11-09T19:29:08.778+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=customers, task_id=create_customers_table, execution_date=20231109T192906, start_date=20231109T192908, end_date=20231109T192908
+[2023-11-09T19:29:08.800+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 255 for task create_customers_table (syntax error at or near ")"
+LINE 12:         );
+                 ^
+; 14686)
+[2023-11-09T19:29:08.828+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-11-09T19:29:08.862+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

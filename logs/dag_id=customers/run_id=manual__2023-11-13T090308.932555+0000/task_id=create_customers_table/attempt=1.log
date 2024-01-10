@@ -1,0 +1,54 @@
+[2023-11-13T09:03:11.595+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-13T09:03:08.932555+00:00 [queued]>
+[2023-11-13T09:03:11.610+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-13T09:03:08.932555+00:00 [queued]>
+[2023-11-13T09:03:11.611+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-13T09:03:11.611+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-13T09:03:11.612+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-13T09:03:11.634+0000] {taskinstance.py:1304} INFO - Executing <Task(PostgresOperator): create_customers_table> on 2023-11-13 09:03:08.932555+00:00
+[2023-11-13T09:03:11.642+0000] {standard_task_runner.py:55} INFO - Started process 1378 to run task
+[2023-11-13T09:03:11.645+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'create_customers_table', 'manual__2023-11-13T09:03:08.932555+00:00', '--job-id', '582', '--raw', '--subdir', 'DAGS_FOLDER/customer.py', '--cfg-path', '/tmp/tmp06vnm7l3']
+[2023-11-13T09:03:11.647+0000] {standard_task_runner.py:83} INFO - Job 582: Subtask create_customers_table
+[2023-11-13T09:03:11.739+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.create_customers_table manual__2023-11-13T09:03:08.932555+00:00 [running]> on host a1532de0db1a
+[2023-11-13T09:03:12.018+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=create_customers_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-13T09:03:08.932555+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-13T09:03:08.932555+00:00
+[2023-11-13T09:03:12.019+0000] {sql.py:253} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS customers (
+            Index INT NOT NULL primary key,
+            Customer_Id varchar(100),
+            First_Name varchar(100),
+            Last_Name varchar(100),
+            Company varchar(100),
+            City varchar(100),
+            Country varchar(100),
+            Phone_1 varchar(100),
+            Email varchar(100),
+            "Subscription Date" date,
+            Website varchar(100)
+        );
+    
+[2023-11-13T09:03:12.031+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-13T09:03:12.314+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-13T09:03:12.318+0000] {sql.py:364} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS customers (
+            Index INT NOT NULL primary key,
+            Customer_Id varchar(100),
+            First_Name varchar(100),
+            Last_Name varchar(100),
+            Company varchar(100),
+            City varchar(100),
+            Country varchar(100),
+            Phone_1 varchar(100),
+            Email varchar(100),
+            "Subscription Date" date,
+            Website varchar(100)
+        );
+    , parameters: None
+[2023-11-13T09:03:12.331+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=customers, task_id=create_customers_table, execution_date=20231113T090308, start_date=20231113T090311, end_date=20231113T090312
+[2023-11-13T09:03:12.382+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-11-13T09:03:12.420+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

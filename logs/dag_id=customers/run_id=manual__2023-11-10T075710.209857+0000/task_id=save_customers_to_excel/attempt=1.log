@@ -1,0 +1,44 @@
+[2023-11-10T07:57:17.253+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T07:57:10.209857+00:00 [queued]>
+[2023-11-10T07:57:17.287+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T07:57:10.209857+00:00 [queued]>
+[2023-11-10T07:57:17.289+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T07:57:17.296+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-10T07:57:17.298+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T07:57:17.332+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): save_customers_to_excel> on 2023-11-10 07:57:10.209857+00:00
+[2023-11-10T07:57:17.339+0000] {standard_task_runner.py:55} INFO - Started process 1988 to run task
+[2023-11-10T07:57:17.350+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'save_customers_to_excel', 'manual__2023-11-10T07:57:10.209857+00:00', '--job-id', '335', '--raw', '--subdir', 'DAGS_FOLDER/customers.py', '--cfg-path', '/tmp/tmpqn70j0np']
+[2023-11-10T07:57:17.354+0000] {standard_task_runner.py:83} INFO - Job 335: Subtask save_customers_to_excel
+[2023-11-10T07:57:17.516+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T07:57:10.209857+00:00 [running]> on host 706d03b983c6
+[2023-11-10T07:57:18.287+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=save_customers_to_excel
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T07:57:10.209857+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-10T07:57:10.209857+00:00
+[2023-11-10T07:57:18.582+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-10T07:57:18.597+0000] {sql.py:364} INFO - Running statement: SELECT * FROM (SELECT DISTINCT ON (customer_id) * FROM customers ) AS unique_customers ORDER BY index, parameters: None
+[2023-11-10T07:57:18.599+0000] {sql.py:373} INFO - Rows affected: 106
+[2023-11-10T07:57:18.614+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/customers.py", line 76, in _save_customers_to_excel
+    df['Years_Until_Subscription'] = df['Subscription'].apply(years_until)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 4357, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1043, in apply
+    return self.apply_standard()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1101, in apply_standard
+    convert=self.convert_dtype,
+  File "pandas/_libs/lib.pyx", line 2859, in pandas._libs.lib.map_infer
+  File "/opt/airflow/dags/count_years.py", line 6, in years_until
+    target_date = datetime.strptime(target_date, "%Y-%m-%d")
+TypeError: strptime() argument 1 must be str, not datetime.date
+[2023-11-10T07:57:18.665+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=customers, task_id=save_customers_to_excel, execution_date=20231110T075710, start_date=20231110T075717, end_date=20231110T075718
+[2023-11-10T07:57:18.694+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 335 for task save_customers_to_excel (strptime() argument 1 must be str, not datetime.date; 1988)
+[2023-11-10T07:57:18.753+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-11-10T07:57:18.788+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

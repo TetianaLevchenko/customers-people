@@ -1,0 +1,33 @@
+[2023-11-10T09:13:09.959+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T09:13:02.299410+00:00 [queued]>
+[2023-11-10T09:13:09.974+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T09:13:02.299410+00:00 [queued]>
+[2023-11-10T09:13:09.975+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T09:13:09.976+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-10T09:13:09.977+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T09:13:09.997+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): save_customers_to_excel> on 2023-11-10 09:13:02.299410+00:00
+[2023-11-10T09:13:10.005+0000] {standard_task_runner.py:55} INFO - Started process 1449 to run task
+[2023-11-10T09:13:10.008+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'save_customers_to_excel', 'manual__2023-11-10T09:13:02.299410+00:00', '--job-id', '436', '--raw', '--subdir', 'DAGS_FOLDER/customers_.py', '--cfg-path', '/tmp/tmpe7v9fxf5']
+[2023-11-10T09:13:10.010+0000] {standard_task_runner.py:83} INFO - Job 436: Subtask save_customers_to_excel
+[2023-11-10T09:13:10.082+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.save_customers_to_excel manual__2023-11-10T09:13:02.299410+00:00 [running]> on host e9f864b40c90
+[2023-11-10T09:13:10.341+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=save_customers_to_excel
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T09:13:02.299410+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-10T09:13:02.299410+00:00
+[2023-11-10T09:13:10.383+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-10T09:13:10.396+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/customers_.py", line 78, in _save_customers_to_excel
+    if 'Years_Until_Subscription' not in ws.iter_cols(min_row=1, max_row=1).next():
+AttributeError: 'generator' object has no attribute 'next'
+[2023-11-10T09:13:10.410+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=customers, task_id=save_customers_to_excel, execution_date=20231110T091302, start_date=20231110T091309, end_date=20231110T091310
+[2023-11-10T09:13:10.427+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 436 for task save_customers_to_excel ('generator' object has no attribute 'next'; 1449)
+[2023-11-10T09:13:10.462+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-11-10T09:13:10.484+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

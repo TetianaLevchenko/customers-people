@@ -1,0 +1,55 @@
+[2023-11-10T11:42:38.015+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: create_merged_table.create_merged_table manual__2023-11-10T11:42:36.269949+00:00 [queued]>
+[2023-11-10T11:42:38.036+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: create_merged_table.create_merged_table manual__2023-11-10T11:42:36.269949+00:00 [queued]>
+[2023-11-10T11:42:38.037+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T11:42:38.040+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-10T11:42:38.041+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T11:42:38.077+0000] {taskinstance.py:1304} INFO - Executing <Task(PostgresOperator): create_merged_table> on 2023-11-10 11:42:36.269949+00:00
+[2023-11-10T11:42:38.088+0000] {standard_task_runner.py:55} INFO - Started process 568 to run task
+[2023-11-10T11:42:38.091+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'create_merged_table', 'create_merged_table', 'manual__2023-11-10T11:42:36.269949+00:00', '--job-id', '501', '--raw', '--subdir', 'DAGS_FOLDER/union.py', '--cfg-path', '/tmp/tmpynl2ifhn']
+[2023-11-10T11:42:38.098+0000] {standard_task_runner.py:83} INFO - Job 501: Subtask create_merged_table
+[2023-11-10T11:42:38.220+0000] {task_command.py:389} INFO - Running <TaskInstance: create_merged_table.create_merged_table manual__2023-11-10T11:42:36.269949+00:00 [running]> on host ae05fe974d8d
+[2023-11-10T11:42:38.355+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=create_merged_table
+AIRFLOW_CTX_TASK_ID=create_merged_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T11:42:36.269949+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-10T11:42:36.269949+00:00
+[2023-11-10T11:42:38.357+0000] {sql.py:253} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS merged_table AS
+        SELECT
+        customers.*,
+        people.user_id AS people_user_id,
+        people.first_name AS people_first_name,
+        people.last_name AS people_last_name,
+        people.sex AS people_sex,
+        people.email AS people_email,
+        people.phone AS people_phone,
+        people.date_of_birth AS people_date_of_birth,
+        people.job_title AS people_job_title
+        FROM customers
+        INNER JOIN people ON customers.customer_id = people.user_id;
+        
+[2023-11-10T11:42:38.371+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-10T11:42:38.775+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-10T11:42:38.780+0000] {sql.py:364} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS merged_table AS
+        SELECT
+        customers.*,
+        people.user_id AS people_user_id,
+        people.first_name AS people_first_name,
+        people.last_name AS people_last_name,
+        people.sex AS people_sex,
+        people.email AS people_email,
+        people.phone AS people_phone,
+        people.date_of_birth AS people_date_of_birth,
+        people.job_title AS people_job_title
+        FROM customers
+        INNER JOIN people ON customers.customer_id = people.user_id;
+        , parameters: None
+[2023-11-10T11:42:38.799+0000] {sql.py:373} INFO - Rows affected: 10
+[2023-11-10T11:42:38.814+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=create_merged_table, task_id=create_merged_table, execution_date=20231110T114236, start_date=20231110T114238, end_date=20231110T114238
+[2023-11-10T11:42:38.840+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-11-10T11:42:38.865+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

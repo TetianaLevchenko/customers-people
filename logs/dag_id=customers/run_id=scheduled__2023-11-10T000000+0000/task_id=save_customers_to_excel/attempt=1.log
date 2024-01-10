@@ -1,0 +1,63 @@
+[2023-11-11T11:32:24.026+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [queued]>
+[2023-11-11T11:32:24.043+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [queued]>
+[2023-11-11T11:32:24.044+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-11T11:32:24.045+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-11T11:32:24.046+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-11T11:32:24.092+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): save_customers_to_excel> on 2023-11-10 00:00:00+00:00
+[2023-11-11T11:32:24.104+0000] {standard_task_runner.py:55} INFO - Started process 6517 to run task
+[2023-11-11T11:32:24.109+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'save_customers_to_excel', 'scheduled__2023-11-10T00:00:00+00:00', '--job-id', '523', '--raw', '--subdir', 'DAGS_FOLDER/customer.py', '--cfg-path', '/tmp/tmplmc74xqs']
+[2023-11-11T11:32:24.112+0000] {standard_task_runner.py:83} INFO - Job 523: Subtask save_customers_to_excel
+[2023-11-11T11:32:24.238+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [running]> on host ae05fe974d8d
+[2023-11-11T11:32:24.603+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=save_customers_to_excel
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-11-10T00:00:00+00:00
+[2023-11-11T11:32:24.837+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-11T11:32:24.920+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/customer.py", line 83, in _save_customers_to_excel
+    wb.save(customers_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/home/airflow/.local/lib/python3.7/site-packages/openpyxl/writer/excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "/usr/local/lib/python3.7/zipfile.py", line 1240, in __init__
+    self.fp = io.open(file, filemode)
+PermissionError: [Errno 13] Permission denied: '/opt/data/customers.xlsx'
+[2023-11-11T11:32:24.947+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=customers, task_id=save_customers_to_excel, execution_date=20231110T000000, start_date=20231111T113224, end_date=20231111T113224
+[2023-11-11T11:32:24.990+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 523 for task save_customers_to_excel ([Errno 13] Permission denied: '/opt/data/customers.xlsx'; 6517)
+[2023-11-11T11:32:25.058+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-11-11T11:32:25.101+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-11-11T12:11:30.168+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [queued]>
+[2023-11-11T12:11:30.184+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [queued]>
+[2023-11-11T12:11:30.185+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-11T12:11:30.186+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-11T12:11:30.186+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-11T12:11:30.212+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): save_customers_to_excel> on 2023-11-10 00:00:00+00:00
+[2023-11-11T12:11:30.225+0000] {standard_task_runner.py:55} INFO - Started process 8759 to run task
+[2023-11-11T12:11:30.228+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'save_customers_to_excel', 'scheduled__2023-11-10T00:00:00+00:00', '--job-id', '527', '--raw', '--subdir', 'DAGS_FOLDER/customer.py', '--cfg-path', '/tmp/tmpktlb28kf']
+[2023-11-11T12:11:30.231+0000] {standard_task_runner.py:83} INFO - Job 527: Subtask save_customers_to_excel
+[2023-11-11T12:11:30.315+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.save_customers_to_excel scheduled__2023-11-10T00:00:00+00:00 [running]> on host ae05fe974d8d
+[2023-11-11T12:11:30.614+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=save_customers_to_excel
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-11-10T00:00:00+00:00
+[2023-11-11T12:11:30.693+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-11T12:11:30.762+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-11-11T12:11:30.776+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=customers, task_id=save_customers_to_excel, execution_date=20231110T000000, start_date=20231111T121130, end_date=20231111T121130
+[2023-11-11T12:11:30.842+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-11-11T12:11:30.867+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

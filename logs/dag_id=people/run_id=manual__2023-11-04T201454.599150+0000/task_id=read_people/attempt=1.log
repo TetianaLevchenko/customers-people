@@ -1,0 +1,38 @@
+[2023-11-04T20:14:57.848+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-04T20:14:54.599150+00:00 [queued]>
+[2023-11-04T20:14:57.863+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-04T20:14:54.599150+00:00 [queued]>
+[2023-11-04T20:14:57.864+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-04T20:14:57.865+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-04T20:14:57.866+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-04T20:14:57.895+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_people> on 2023-11-04 20:14:54.599150+00:00
+[2023-11-04T20:14:57.904+0000] {standard_task_runner.py:55} INFO - Started process 2151 to run task
+[2023-11-04T20:14:57.908+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'read_people', 'manual__2023-11-04T20:14:54.599150+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmpfgok6da1']
+[2023-11-04T20:14:57.910+0000] {standard_task_runner.py:83} INFO - Job 189: Subtask read_people
+[2023-11-04T20:14:58.014+0000] {task_command.py:376} INFO - Running <TaskInstance: people.read_people manual__2023-11-04T20:14:54.599150+00:00 [running]> on host 0ef3ea835a0e
+[2023-11-04T20:14:58.101+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=read_people
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-04T20:14:54.599150+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-04T20:14:54.599150+00:00
+[2023-11-04T20:14:58.109+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people.py", line 34, in _read_people
+    ''', (int(cleaned_row[0]), cleaned_row[1], cleaned_row[2], cleaned_row[3], cleaned_row[4], cleaned_row[5], cleaned_row[6], cleaned_row[7], cleaned_row[8]))
+psycopg2.errors.UndefinedColumn: column "Index" of relation "people" does not exist
+LINE 2:                 INSERT INTO people ("Index", "User Id", "Fir...
+                                            ^
+
+[2023-11-04T20:14:58.122+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=people, task_id=read_people, execution_date=20231104T201454, start_date=20231104T201457, end_date=20231104T201458
+[2023-11-04T20:14:58.139+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 189 for task read_people (column "Index" of relation "people" does not exist
+LINE 2:                 INSERT INTO people ("Index", "User Id", "Fir...
+                                            ^
+; 2151)
+[2023-11-04T20:14:58.160+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-04T20:14:58.182+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

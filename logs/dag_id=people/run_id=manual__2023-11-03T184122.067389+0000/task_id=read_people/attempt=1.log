@@ -1,0 +1,45 @@
+[2023-11-03T18:41:25.541+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T18:41:22.067389+00:00 [queued]>
+[2023-11-03T18:41:25.557+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_people manual__2023-11-03T18:41:22.067389+00:00 [queued]>
+[2023-11-03T18:41:25.559+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T18:41:25.560+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T18:41:25.561+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T18:41:25.580+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_people> on 2023-11-03 18:41:22.067389+00:00
+[2023-11-03T18:41:25.586+0000] {standard_task_runner.py:55} INFO - Started process 1862 to run task
+[2023-11-03T18:41:25.589+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'read_people', 'manual__2023-11-03T18:41:22.067389+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmpgf3fio7q']
+[2023-11-03T18:41:25.591+0000] {standard_task_runner.py:83} INFO - Job 127: Subtask read_people
+[2023-11-03T18:41:25.655+0000] {task_command.py:376} INFO - Running <TaskInstance: people.read_people manual__2023-11-03T18:41:22.067389+00:00 [running]> on host 6b65bc8eaea5
+[2023-11-03T18:41:25.738+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=read_people
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T18:41:22.067389+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T18:41:22.067389+00:00
+[2023-11-03T18:41:25.742+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 10,8e4FB470FE19bF0,Isaiah,Downs,Male,virginiaterrell@example.org,+1-511-372-1544x8206,1964-09-20,"Engineer, site"
+[2023-11-03T18:41:25.743+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 13,C03fDADdAadAdCe,Mandy,Blake,Male,jefferynoble@example.org,(992)466-1305x4947,2007-12-08,"Scientist, clinical (histocompatibility and immunogenetics)"
+[2023-11-03T18:41:25.744+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 19,7F7E1BAcb0C9AFf,Alvin,Paul,Male,gilbertdonaldson@example.com,219.436.0887x07551,1949-05-12,"Teacher, adult education"
+[2023-11-03T18:41:25.745+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 21,b31D271F8c200AB,Jacqueline,Norton,Female,carias@example.net,819.309.7679x59173,1952-10-09,"Scientist, marine"
+[2023-11-03T18:41:25.745+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 26,c9F2282C40BEC1E,Sean,Levine,Male,sallymiller@example.net,4915828504,2010-10-09,"Conservation officer, nature"
+[2023-11-03T18:41:25.746+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 34,6Dec5b5542F8ed8,Brandon,Schmidt,Female,mconley@example.net,+1-386-673-1465x006,1931-05-12,"Engineer, biomedical"
+[2023-11-03T18:41:25.747+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 37,aa614aAE4B7Cf0C,Leonard,Hurst,Male,clinton78@example.org,941-038-0427x38800,1938-03-13,"Accountant, chartered management"
+[2023-11-03T18:41:25.748+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 38,ACcde95AAe3e6cC,Gene,Rich,Female,luisdeleon@example.org,+1-356-818-6604x89537,1946-08-22,"Surveyor, quantity"
+[2023-11-03T18:41:25.749+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 41,7D0AcBF6CCac3fd,Matthew,Stone,Female,evelyn31@example.org,952-381-6360,2017-08-23,"Scientist, clinical (histocompatibility and immunogenetics)"
+[2023-11-03T18:41:25.749+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 47,f3BD2cBF7eEb6df,Danielle,Estrada,Female,jvang@example.org,(890)374-9518x772,1930-07-09,"Accountant, chartered management"
+[2023-11-03T18:41:25.750+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 50,E47FB71DD9ACCd9,Joshua,Sweeney,Male,daisymcgee@example.net,875.994.2100x535,1954-07-28,"Education officer, museum"
+[2023-11-03T18:41:25.751+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 65,Ee6974f90eeCe18,Harold,Barnett,Female,nathan65@example.org,+1-026-265-6392,1943-03-15,"Biochemist, clinical"
+[2023-11-03T18:41:25.752+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 66,cEf02C076afa07f,Larry,Harper,Male,maria32@example.org,+1-244-630-3792x4121,2021-05-05,"Scientist, water quality"
+[2023-11-03T18:41:25.752+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 68,3faB1CBfEFBDdD4,Brittney,Rubio,Female,corey92@example.com,593.976.2528,1959-12-24,"Biochemist, clinical"
+[2023-11-03T18:41:25.754+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 75,c935b7Eb6FA0B0F,Kim,Andrews,Female,wpetersen@example.org,7677125383,1990-11-15,"Biochemist, clinical"
+[2023-11-03T18:41:25.755+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 77,dade3452F0c32FD,Jonathon,Atkinson,Male,gailfrench@example.net,874-037-2032x932,2011-07-19,"Psychologist, forensic"
+[2023-11-03T18:41:25.755+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 85,E883773cA5219Be,Helen,Williamson,Female,melvin08@example.net,001-377-726-4229,1911-08-11,"Lecturer, further education"
+[2023-11-03T18:41:25.756+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 87,5834700fbEd2771,Chelsea,Dickson,Male,johnnyhendricks@example.net,001-698-651-0138x18588,1958-05-13,"Teacher, early years/pre"
+[2023-11-03T18:41:25.757+0000] {logging_mixin.py:120} INFO - Skipping row with invalid 'Index' value: 92,d6EA619A7C4aA95,Jamie,Hardy,Female,sheenadouglas@example.com,(900)803-9295x11533,1994-07-17,"Conservator, furniture"
+[2023-11-03T18:41:25.758+0000] {logging_mixin.py:120} INFO - [[100, 'b8D0aD3490FC7e1', 'Mariah']]
+[2023-11-03T18:41:25.770+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-03T18:41:25.777+0000] {sql.py:415} INFO - Done loading. Loaded a total of 1 rows
+[2023-11-03T18:41:25.779+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-11-03T18:41:25.792+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=people, task_id=read_people, execution_date=20231103T184122, start_date=20231103T184125, end_date=20231103T184125
+[2023-11-03T18:41:25.842+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-11-03T18:41:25.865+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

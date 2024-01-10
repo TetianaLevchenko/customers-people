@@ -1,0 +1,55 @@
+[2023-11-03T19:43:07.638+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-03T19:43:05.194702+00:00 [queued]>
+[2023-11-03T19:43:07.655+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: customers.create_customers_table manual__2023-11-03T19:43:05.194702+00:00 [queued]>
+[2023-11-03T19:43:07.656+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T19:43:07.657+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T19:43:07.657+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T19:43:07.678+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): create_customers_table> on 2023-11-03 19:43:05.194702+00:00
+[2023-11-03T19:43:07.685+0000] {standard_task_runner.py:55} INFO - Started process 4772 to run task
+[2023-11-03T19:43:07.688+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'create_customers_table', 'manual__2023-11-03T19:43:05.194702+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/customer.py', '--cfg-path', '/tmp/tmpbkt7rzna']
+[2023-11-03T19:43:07.691+0000] {standard_task_runner.py:83} INFO - Job 147: Subtask create_customers_table
+[2023-11-03T19:43:07.764+0000] {task_command.py:376} INFO - Running <TaskInstance: customers.create_customers_table manual__2023-11-03T19:43:05.194702+00:00 [running]> on host 6b65bc8eaea5
+[2023-11-03T19:43:07.860+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=create_customers_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T19:43:05.194702+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T19:43:05.194702+00:00
+[2023-11-03T19:43:07.872+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-03T19:43:07.876+0000] {sql.py:315} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS customers (
+            Index INT NOT NULL primary key,
+            Customer_Id varchar(100),
+            First Name varchar(100),
+            Last Name varchar(100),
+            Company varchar(100),
+            City varchar(100),
+            Country varchar(100),
+            Phone 1 varchar(100),
+            Phone 2 varchar(100),
+            Email varchar(100),
+            Subscription Date Date,
+            Website varchar(100)
+        );
+    , parameters: None
+[2023-11-03T19:43:07.878+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 94, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 295, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 320, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "varchar"
+LINE 5:             First Name varchar(100),
+                               ^
+
+[2023-11-03T19:43:07.889+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=customers, task_id=create_customers_table, execution_date=20231103T194305, start_date=20231103T194307, end_date=20231103T194307
+[2023-11-03T19:43:07.903+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 147 for task create_customers_table (syntax error at or near "varchar"
+LINE 5:             First Name varchar(100),
+                               ^
+; 4772)
+[2023-11-03T19:43:07.945+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-03T19:43:07.983+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

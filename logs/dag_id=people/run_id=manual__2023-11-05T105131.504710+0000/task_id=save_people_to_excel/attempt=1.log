@@ -1,0 +1,24 @@
+[2023-11-05T10:51:36.269+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.save_people_to_excel manual__2023-11-05T10:51:31.504710+00:00 [queued]>
+[2023-11-05T10:51:36.282+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.save_people_to_excel manual__2023-11-05T10:51:31.504710+00:00 [queued]>
+[2023-11-05T10:51:36.283+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-05T10:51:36.284+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-05T10:51:36.285+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-05T10:51:36.305+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): save_people_to_excel> on 2023-11-05 10:51:31.504710+00:00
+[2023-11-05T10:51:36.313+0000] {standard_task_runner.py:55} INFO - Started process 1946 to run task
+[2023-11-05T10:51:36.316+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'save_people_to_excel', 'manual__2023-11-05T10:51:31.504710+00:00', '--job-id', '272', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmp4o_lz6fv']
+[2023-11-05T10:51:36.318+0000] {standard_task_runner.py:83} INFO - Job 272: Subtask save_people_to_excel
+[2023-11-05T10:51:36.396+0000] {task_command.py:376} INFO - Running <TaskInstance: people.save_people_to_excel manual__2023-11-05T10:51:31.504710+00:00 [running]> on host 9d85c6014d6e
+[2023-11-05T10:51:36.485+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=save_people_to_excel
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-05T10:51:31.504710+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-05T10:51:31.504710+00:00
+[2023-11-05T10:51:36.498+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-05T10:51:36.931+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-11-05T10:51:36.944+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=people, task_id=save_people_to_excel, execution_date=20231105T105131, start_date=20231105T105136, end_date=20231105T105136
+[2023-11-05T10:51:37.013+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-11-05T10:51:37.038+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

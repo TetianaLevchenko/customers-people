@@ -1,0 +1,32 @@
+[2023-11-03T15:10:39.101+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_countries manual__2023-11-03T15:10:33.328868+00:00 [queued]>
+[2023-11-03T15:10:39.113+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.read_countries manual__2023-11-03T15:10:33.328868+00:00 [queued]>
+[2023-11-03T15:10:39.114+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:10:39.115+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T15:10:39.115+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T15:10:39.135+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_countries> on 2023-11-03 15:10:33.328868+00:00
+[2023-11-03T15:10:39.142+0000] {standard_task_runner.py:55} INFO - Started process 7207 to run task
+[2023-11-03T15:10:39.144+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'read_countries', 'manual__2023-11-03T15:10:33.328868+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmps8llyvdd']
+[2023-11-03T15:10:39.146+0000] {standard_task_runner.py:83} INFO - Job 54: Subtask read_countries
+[2023-11-03T15:10:39.210+0000] {task_command.py:376} INFO - Running <TaskInstance: people.read_countries manual__2023-11-03T15:10:33.328868+00:00 [running]> on host ff0830ad3dd0
+[2023-11-03T15:10:39.291+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=read_countries
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T15:10:33.328868+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T15:10:33.328868+00:00
+[2023-11-03T15:10:39.294+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people.py", line 12, in _read_people
+    with open('/opt/data/people-100.csv') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/data/people-100.csv'
+[2023-11-03T15:10:39.308+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=people, task_id=read_countries, execution_date=20231103T151033, start_date=20231103T151039, end_date=20231103T151039
+[2023-11-03T15:10:39.324+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 54 for task read_countries ([Errno 2] No such file or directory: '/opt/data/people-100.csv'; 7207)
+[2023-11-03T15:10:39.356+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-11-03T15:10:39.379+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

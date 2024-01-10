@@ -1,0 +1,37 @@
+[2023-11-10T10:09:34.934+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.read_customers manual__2023-11-10T10:09:30.663860+00:00 [queued]>
+[2023-11-10T10:09:34.950+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.read_customers manual__2023-11-10T10:09:30.663860+00:00 [queued]>
+[2023-11-10T10:09:34.951+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T10:09:34.952+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-10T10:09:34.953+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-10T10:09:34.978+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): read_customers> on 2023-11-10 10:09:30.663860+00:00
+[2023-11-10T10:09:34.985+0000] {standard_task_runner.py:55} INFO - Started process 252 to run task
+[2023-11-10T10:09:34.988+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'read_customers', 'manual__2023-11-10T10:09:30.663860+00:00', '--job-id', '467', '--raw', '--subdir', 'DAGS_FOLDER/customer.py', '--cfg-path', '/tmp/tmpdk3jqv_w']
+[2023-11-10T10:09:34.990+0000] {standard_task_runner.py:83} INFO - Job 467: Subtask read_customers
+[2023-11-10T10:09:35.081+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.read_customers manual__2023-11-10T10:09:30.663860+00:00 [running]> on host ccf8e59e32fe
+[2023-11-10T10:09:35.378+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=read_customers
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-10T10:09:30.663860+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-10T10:09:30.663860+00:00
+[2023-11-10T10:09:35.399+0000] {logging_mixin.py:137} INFO - An error occurred for country Pitcairn Islands: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.406+0000] {logging_mixin.py:137} INFO - An error occurred for country Vietnam: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.429+0000] {logging_mixin.py:137} INFO - An error occurred for country Tanzania: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.443+0000] {logging_mixin.py:137} INFO - An error occurred for country Bolivia: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.453+0000] {logging_mixin.py:137} INFO - An error occurred for country Swaziland: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.455+0000] {logging_mixin.py:137} INFO - An error occurred for country Palestinian Territory: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.456+0000] {logging_mixin.py:137} INFO - An error occurred for country Saint Barthelemy: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.465+0000] {logging_mixin.py:137} INFO - An error occurred for country French Southern Territories: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.467+0000] {logging_mixin.py:137} INFO - An error occurred for country Iran: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.472+0000] {logging_mixin.py:137} INFO - An error occurred for country United States Virgin Islands: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.473+0000] {logging_mixin.py:137} INFO - An error occurred for country Kyrgyz Republic: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.478+0000] {logging_mixin.py:137} INFO - An error occurred for country Micronesia: (0) Missing or invalid default region.. Adding '+' to the phone number.
+[2023-11-10T10:09:35.507+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-10T10:09:35.552+0000] {sql.py:462} INFO - Done loading. Loaded a total of 106 rows into customers
+[2023-11-10T10:09:35.553+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-11-10T10:09:35.571+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=customers, task_id=read_customers, execution_date=20231110T100930, start_date=20231110T100934, end_date=20231110T100935
+[2023-11-10T10:09:35.603+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-11-10T10:09:35.632+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

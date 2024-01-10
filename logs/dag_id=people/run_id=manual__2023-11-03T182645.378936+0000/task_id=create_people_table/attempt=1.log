@@ -1,0 +1,35 @@
+[2023-11-03T18:26:47.205+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.create_people_table manual__2023-11-03T18:26:45.378936+00:00 [queued]>
+[2023-11-03T18:26:47.223+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: people.create_people_table manual__2023-11-03T18:26:45.378936+00:00 [queued]>
+[2023-11-03T18:26:47.224+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T18:26:47.225+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-11-03T18:26:47.225+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-03T18:26:47.255+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): create_people_table> on 2023-11-03 18:26:45.378936+00:00
+[2023-11-03T18:26:47.266+0000] {standard_task_runner.py:55} INFO - Started process 1147 to run task
+[2023-11-03T18:26:47.268+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'people', 'create_people_table', 'manual__2023-11-03T18:26:45.378936+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/people.py', '--cfg-path', '/tmp/tmp64a3_wp4']
+[2023-11-03T18:26:47.271+0000] {standard_task_runner.py:83} INFO - Job 113: Subtask create_people_table
+[2023-11-03T18:26:47.364+0000] {task_command.py:376} INFO - Running <TaskInstance: people.create_people_table manual__2023-11-03T18:26:45.378936+00:00 [running]> on host 6b65bc8eaea5
+[2023-11-03T18:26:47.461+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=people
+AIRFLOW_CTX_TASK_ID=create_people_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-03T18:26:45.378936+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-03T18:26:45.378936+00:00
+[2023-11-03T18:26:47.472+0000] {base.py:71} INFO - Using connection ID 'postgres_people' for task execution.
+[2023-11-03T18:26:47.476+0000] {sql.py:315} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS people (
+            Index INT NOT NULL primary key,
+            User_Id varchar(100),
+            First_Name varchar(100),
+            Last_Name varchar(100),
+            Sex varchar(100),
+            Email varchar(100)
+        );
+    , parameters: None
+[2023-11-03T18:26:47.478+0000] {postgres.py:96} INFO - NOTICE:  relation "people" already exists, skipping
+
+[2023-11-03T18:26:47.489+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=people, task_id=create_people_table, execution_date=20231103T182645, start_date=20231103T182647, end_date=20231103T182647
+[2023-11-03T18:26:47.523+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-11-03T18:26:47.551+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

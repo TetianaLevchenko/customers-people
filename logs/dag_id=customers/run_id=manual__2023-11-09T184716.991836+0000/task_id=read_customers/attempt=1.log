@@ -1,0 +1,143 @@
+[2023-11-09T18:47:21.521+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.read_customers manual__2023-11-09T18:47:16.991836+00:00 [queued]>
+[2023-11-09T18:47:21.535+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: customers.read_customers manual__2023-11-09T18:47:16.991836+00:00 [queued]>
+[2023-11-09T18:47:21.536+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-09T18:47:21.537+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-11-09T18:47:21.538+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-09T18:47:21.560+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): read_customers> on 2023-11-09 18:47:16.991836+00:00
+[2023-11-09T18:47:21.567+0000] {standard_task_runner.py:55} INFO - Started process 12156 to run task
+[2023-11-09T18:47:21.570+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'customers', 'read_customers', 'manual__2023-11-09T18:47:16.991836+00:00', '--job-id', '195', '--raw', '--subdir', 'DAGS_FOLDER/customers.py', '--cfg-path', '/tmp/tmpfxyzgs_5']
+[2023-11-09T18:47:21.572+0000] {standard_task_runner.py:83} INFO - Job 195: Subtask read_customers
+[2023-11-09T18:47:21.640+0000] {task_command.py:389} INFO - Running <TaskInstance: customers.read_customers manual__2023-11-09T18:47:16.991836+00:00 [running]> on host 9dcc097b8292
+[2023-11-09T18:47:21.891+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tetiana
+AIRFLOW_CTX_DAG_ID=customers
+AIRFLOW_CTX_TASK_ID=read_customers
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-09T18:47:16.991836+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-09T18:47:16.991836+00:00
+[2023-11-09T18:47:21.909+0000] {logging_mixin.py:137} INFO - An error occurred for country Pitcairn Islands: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.920+0000] {logging_mixin.py:137} INFO - An error occurred for country Vietnam: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.940+0000] {logging_mixin.py:137} INFO - An error occurred for country Tanzania: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.952+0000] {logging_mixin.py:137} INFO - An error occurred for country Bolivia: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.960+0000] {logging_mixin.py:137} INFO - An error occurred for country Swaziland: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.962+0000] {logging_mixin.py:137} INFO - An error occurred for country Palestinian Territory: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.962+0000] {logging_mixin.py:137} INFO - An error occurred for country Saint Barthelemy: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.970+0000] {logging_mixin.py:137} INFO - An error occurred for country French Southern Territories: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.971+0000] {logging_mixin.py:137} INFO - An error occurred for country Iran: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.977+0000] {logging_mixin.py:137} INFO - An error occurred for country United States Virgin Islands: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.978+0000] {logging_mixin.py:137} INFO - An error occurred for country Kyrgyz Republic: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.982+0000] {logging_mixin.py:137} INFO - An error occurred for country Micronesia: (0) Missing or invalid default region.
+[2023-11-09T18:47:21.996+0000] {logging_mixin.py:137} INFO - zunigavanessa@smith.info
+[2023-11-09T18:47:21.997+0000] {logging_mixin.py:137} INFO - vmata@colon.com
+[2023-11-09T18:47:21.997+0000] {logging_mixin.py:137} INFO - beckycarr@hogan.com
+[2023-11-09T18:47:21.998+0000] {logging_mixin.py:137} INFO - stanleyblackwell@benson.org
+[2023-11-09T18:47:21.999+0000] {logging_mixin.py:137} INFO - colinalvarado@miles.net
+[2023-11-09T18:47:22.000+0000] {logging_mixin.py:137} INFO - louis27@gilbert.com
+[2023-11-09T18:47:22.001+0000] {logging_mixin.py:137} INFO - tgates@cantrell.com
+[2023-11-09T18:47:22.002+0000] {logging_mixin.py:137} INFO - asnow@colon.com
+[2023-11-09T18:47:22.003+0000] {logging_mixin.py:137} INFO - mariokhan@ryan-pope.org
+[2023-11-09T18:47:22.003+0000] {logging_mixin.py:137} INFO - mdyer@escobar.net
+[2023-11-09T18:47:22.004+0000] {logging_mixin.py:137} INFO - kirksalas@webb.com
+[2023-11-09T18:47:22.005+0000] {logging_mixin.py:137} INFO - mark42@robbins.com
+[2023-11-09T18:47:22.006+0000] {logging_mixin.py:137} INFO - alex56@walls.org
+[2023-11-09T18:47:22.007+0000] {logging_mixin.py:137} INFO - holdenmiranda@clarke.com
+[2023-11-09T18:47:22.008+0000] {logging_mixin.py:137} INFO - cassieparrish@blevins-chapman.net
+[2023-11-09T18:47:22.009+0000] {logging_mixin.py:137} INFO - vduncan@parks-hardy.com
+[2023-11-09T18:47:22.009+0000] {logging_mixin.py:137} INFO - holtgwendolyn@watson-davenport.com
+[2023-11-09T18:47:22.010+0000] {logging_mixin.py:137} INFO - jaredjuarez@carroll.org
+[2023-11-09T18:47:22.010+0000] {logging_mixin.py:137} INFO - joseph26@jacobson.com
+[2023-11-09T18:47:22.011+0000] {logging_mixin.py:137} INFO - tuckerangie@salazar.net
+[2023-11-09T18:47:22.011+0000] {logging_mixin.py:137} INFO - fgibson@drake-webb.com
+[2023-11-09T18:47:22.012+0000] {logging_mixin.py:137} INFO - blanchardbob@wallace-shannon.com
+[2023-11-09T18:47:22.013+0000] {logging_mixin.py:137} INFO - rsingleton@ryan-cherry.com
+[2023-11-09T18:47:22.013+0000] {logging_mixin.py:137} INFO - stefanie71@spence.com
+[2023-11-09T18:47:22.014+0000] {logging_mixin.py:137} INFO - mariah88@santos.com
+[2023-11-09T18:47:22.014+0000] {logging_mixin.py:137} INFO - donnamullins@norris-barrett.org
+[2023-11-09T18:47:22.015+0000] {logging_mixin.py:137} INFO - stacey67@fields.org
+[2023-11-09T18:47:22.016+0000] {logging_mixin.py:137} INFO - jacobkhan@bright.biz
+[2023-11-09T18:47:22.016+0000] {logging_mixin.py:137} INFO - wterrell@clark.com
+[2023-11-09T18:47:22.017+0000] {logging_mixin.py:137} INFO - qjimenez@boyd.com
+[2023-11-09T18:47:22.017+0000] {logging_mixin.py:137} INFO - gfigueroa@boone-zavala.com
+[2023-11-09T18:47:22.018+0000] {logging_mixin.py:137} INFO - tapiagreg@beard.info
+[2023-11-09T18:47:22.018+0000] {logging_mixin.py:137} INFO - coleolson@jennings.net
+[2023-11-09T18:47:22.019+0000] {logging_mixin.py:137} INFO - georgeross@miles.org
+[2023-11-09T18:47:22.020+0000] {logging_mixin.py:137} INFO - willistonya@randolph-baker.com
+[2023-11-09T18:47:22.020+0000] {logging_mixin.py:137} INFO - harrisisaiah@jenkins.com
+[2023-11-09T18:47:22.021+0000] {logging_mixin.py:137} INFO - fwolfe@dorsey.com
+[2023-11-09T18:47:22.021+0000] {logging_mixin.py:137} INFO - tiffanydavies@harris-mcfarland.org
+[2023-11-09T18:47:22.022+0000] {logging_mixin.py:137} INFO - preese@frye-vega.com
+[2023-11-09T18:47:22.022+0000] {logging_mixin.py:137} INFO - ann48@miller.com
+[2023-11-09T18:47:22.023+0000] {logging_mixin.py:137} INFO - tcummings@fitzpatrick-ashley.com
+[2023-11-09T18:47:22.023+0000] {logging_mixin.py:137} INFO - woodwardandres@phelps.com
+[2023-11-09T18:47:22.024+0000] {logging_mixin.py:137} INFO - barbarapittman@holder.com
+[2023-11-09T18:47:22.025+0000] {logging_mixin.py:137} INFO - bstuart@williamson-mcclure.com
+[2023-11-09T18:47:22.025+0000] {logging_mixin.py:137} INFO - zkrueger@wolf-chavez.net
+[2023-11-09T18:47:22.026+0000] {logging_mixin.py:137} INFO - juan80@henson.net
+[2023-11-09T18:47:22.026+0000] {logging_mixin.py:137} INFO - bauercrystal@gay.com
+[2023-11-09T18:47:22.027+0000] {logging_mixin.py:137} INFO - bartlettjenna@zuniga-moss.biz
+[2023-11-09T18:47:22.027+0000] {logging_mixin.py:137} INFO - mccalltyrone@durham-rose.biz
+[2023-11-09T18:47:22.028+0000] {logging_mixin.py:137} INFO - bobhammond@barry.biz
+[2023-11-09T18:47:22.028+0000] {logging_mixin.py:137} INFO - uwarner@steele-arias.com
+[2023-11-09T18:47:22.029+0000] {logging_mixin.py:137} INFO - xpittman@ritter-carney.net
+[2023-11-09T18:47:22.029+0000] {logging_mixin.py:137} INFO - vaughanchristy@lara.biz
+[2023-11-09T18:47:22.030+0000] {logging_mixin.py:137} INFO - clinton85@colon-arias.org
+[2023-11-09T18:47:22.031+0000] {logging_mixin.py:137} INFO - greenemiranda@zimmerman.com
+[2023-11-09T18:47:22.031+0000] {logging_mixin.py:137} INFO - goodmancesar@figueroa.biz
+[2023-11-09T18:47:22.032+0000] {logging_mixin.py:137} INFO - yhanson@warner-diaz.org
+[2023-11-09T18:47:22.033+0000] {logging_mixin.py:137} INFO - howelldarren@house-cohen.com
+[2023-11-09T18:47:22.033+0000] {logging_mixin.py:137} INFO - ncamacho@boone-simmons.org
+[2023-11-09T18:47:22.034+0000] {logging_mixin.py:137} INFO - kristopher62@oliver.com
+[2023-11-09T18:47:22.034+0000] {logging_mixin.py:137} INFO - mpham@rios-guzman.com
+[2023-11-09T18:47:22.035+0000] {logging_mixin.py:137} INFO - zachary96@mitchell-bryant.org
+[2023-11-09T18:47:22.035+0000] {logging_mixin.py:137} INFO - kristiwhitney@bernard.com
+[2023-11-09T18:47:22.036+0000] {logging_mixin.py:137} INFO - leah85@sutton-terrell.com
+[2023-11-09T18:47:22.036+0000] {logging_mixin.py:137} INFO - levigiles@vincent.com
+[2023-11-09T18:47:22.037+0000] {logging_mixin.py:137} INFO - fisherlinda@schaefer.net
+[2023-11-09T18:47:22.037+0000] {logging_mixin.py:137} INFO - scottcurtis@hurley.biz
+[2023-11-09T18:47:22.038+0000] {logging_mixin.py:137} INFO - nicholsonnina@montgomery.info
+[2023-11-09T18:47:22.039+0000] {logging_mixin.py:137} INFO - zvalencia@phelps.com
+[2023-11-09T18:47:22.040+0000] {logging_mixin.py:137} INFO - alex06@galloway.com
+[2023-11-09T18:47:22.040+0000] {logging_mixin.py:137} INFO - lee48@manning.com
+[2023-11-09T18:47:22.041+0000] {logging_mixin.py:137} INFO - aharper@maddox-townsend.org
+[2023-11-09T18:47:22.041+0000] {logging_mixin.py:137} INFO - buckleycory@odonnell.net
+[2023-11-09T18:47:22.042+0000] {logging_mixin.py:137} INFO - angie04@oconnell.com
+[2023-11-09T18:47:22.042+0000] {logging_mixin.py:137} INFO - zrosario@rojas-hardin.net
+[2023-11-09T18:47:22.043+0000] {logging_mixin.py:137} INFO - shieldskerry@robles.com
+[2023-11-09T18:47:22.043+0000] {logging_mixin.py:137} INFO - mchandler@cochran-huerta.org
+[2023-11-09T18:47:22.044+0000] {logging_mixin.py:137} INFO - katrinalane@fitzgerald.com
+[2023-11-09T18:47:22.045+0000] {logging_mixin.py:137} INFO - cookejill@powell.com
+[2023-11-09T18:47:22.045+0000] {logging_mixin.py:137} INFO - elizabethbarr@ewing.com
+[2023-11-09T18:47:22.046+0000] {logging_mixin.py:137} INFO - corey75@wiggins.com
+[2023-11-09T18:47:22.046+0000] {logging_mixin.py:137} INFO - chloelester@higgins-wilkinson.com
+[2023-11-09T18:47:22.047+0000] {logging_mixin.py:137} INFO - isaac26@benton-finley.com
+[2023-11-09T18:47:22.047+0000] {logging_mixin.py:137} INFO - justinwalters@jimenez.com
+[2023-11-09T18:47:22.048+0000] {logging_mixin.py:137} INFO - maurice46@morgan.com
+[2023-11-09T18:47:22.048+0000] {logging_mixin.py:137} INFO - walter83@juarez.org
+[2023-11-09T18:47:22.049+0000] {logging_mixin.py:137} INFO - kmercer@wagner.com
+[2023-11-09T18:47:22.050+0000] {logging_mixin.py:137} INFO - vcantu@norton.com
+[2023-11-09T18:47:22.050+0000] {logging_mixin.py:137} INFO - hilljesse@barrett.info
+[2023-11-09T18:47:22.051+0000] {logging_mixin.py:137} INFO - tyrone77@valenzuela.info
+[2023-11-09T18:47:22.051+0000] {logging_mixin.py:137} INFO - elliserica@frank.com
+[2023-11-09T18:47:22.052+0000] {logging_mixin.py:137} INFO - nsteele@sparks.com
+[2023-11-09T18:47:22.053+0000] {logging_mixin.py:137} INFO - dudleyemily@gonzales.biz
+[2023-11-09T18:47:22.054+0000] {logging_mixin.py:137} INFO - alan79@gates-mclaughlin.com
+[2023-11-09T18:47:22.054+0000] {logging_mixin.py:137} INFO - grayjean@lowery-good.com
+[2023-11-09T18:47:22.055+0000] {logging_mixin.py:137} INFO - hhart@jensen.com
+[2023-11-09T18:47:22.056+0000] {logging_mixin.py:137} INFO - vkemp@ferrell.com
+[2023-11-09T18:47:22.056+0000] {logging_mixin.py:137} INFO - swagner@kane.org
+[2023-11-09T18:47:22.057+0000] {logging_mixin.py:137} INFO - mccarthystephen@horn-green.biz
+[2023-11-09T18:47:22.057+0000] {logging_mixin.py:137} INFO - colleen91@faulkner.biz
+[2023-11-09T18:47:22.058+0000] {logging_mixin.py:137} INFO - colleen91@faulkner.biz
+[2023-11-09T18:47:22.059+0000] {logging_mixin.py:137} INFO - colleen91@faulkner.biz
+[2023-11-09T18:47:22.059+0000] {logging_mixin.py:137} INFO - colleen91@faulkner.biz
+[2023-11-09T18:47:22.060+0000] {logging_mixin.py:137} INFO - colleen91@faulkner.biz
+[2023-11-09T18:47:22.060+0000] {logging_mixin.py:137} INFO - grayjean@lowery-good.com
+[2023-11-09T18:47:22.061+0000] {logging_mixin.py:137} INFO - hhart@jensen.com
+[2023-11-09T18:47:22.071+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-11-09T18:47:22.131+0000] {sql.py:462} INFO - Done loading. Loaded a total of 106 rows into customers
+[2023-11-09T18:47:22.133+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-11-09T18:47:22.148+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=customers, task_id=read_customers, execution_date=20231109T184716, start_date=20231109T184721, end_date=20231109T184722
+[2023-11-09T18:47:22.184+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-11-09T18:47:22.212+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
